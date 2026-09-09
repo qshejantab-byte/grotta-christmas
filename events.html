@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christmas at Grotta 2026 | Grotta Resort</title>
+<meta name="title" content="Christmas at Grotta 2026 | Mountain Christmas Village">
+<meta name="description" content="Celebrate Christmas at Grotta Resort in Musanze with a festive market, seasonal food, Christmas cinema, live entertainment, family attractions and magical mountain stays.">
+<meta property="og:title" content="Christmas at Grotta 2026">
+<meta property="og:description" content="Discover a magical mountain Christmas Village at Grotta Resort, with festive food, cinema, entertainment, family experiences and holiday stays.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://grottaresort.rw/images/AV7I5571.jpg">
+<meta property="og:image:alt" content="Christmas lights and festive decorations at Grotta Resort in Musanze, Rwanda.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --stone:      #14110F;
+    --stone-2:    #1C1713;
+    --stone-3:    #26201A;
+    --parchment:  #F3EEE3;
+    --parchment-dim: #C9C0AF;
+    --gold:       #C7A24C;
+    --gold-dim:   #8A7440;
+    --ember:      #7C3C28;
+    --pine:       #223225;
+    --line:       rgba(243,238,227,0.14);
+    --radius-s:   2px;
+    --content-max: 1320px;
+    --gutter: clamp(24px, 6vw, 96px);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--stone);
+    color:var(--parchment);
+    font-family:'Work Sans', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.serif{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    margin:0;
+    color:var(--parchment);
+  }
+
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap;}
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:var(--content-max);
+    margin:0 auto;
+    padding-left:var(--gutter);
+    padding-right:var(--gutter);
+  }
+
+  /* ---------- SITE HEADER ---------- */
+  .site-header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px var(--gutter);
+    background:linear-gradient(to bottom, rgba(20,17,15,0.85), rgba(20,17,15,0));
+    transition:background 0.3s ease, backdrop-filter 0.3s ease;
+  }
+  .site-header.is-scrolled{
+    background:rgba(20,17,15,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .logo{
+    font-family:'Fraunces', serif;
+    font-size:1.05rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+  }
+  .primary-nav{display:flex; gap:36px; list-style:none; margin:0; padding:0;}
+  .primary-nav a{
+    font-size:0.86rem;
+    color:var(--parchment-dim);
+    letter-spacing:0.02em;
+    transition:color 0.2s ease;
+  }
+  .primary-nav a:hover{color:var(--parchment);}
+  .nav-cta{
+    border:1px solid var(--gold-dim);
+    padding:9px 20px;
+    font-size:0.82rem;
+    letter-spacing:0.03em;
+    color:var(--parchment);
+    transition:border-color 0.2s ease, background 0.2s ease;
+  }
+  .nav-cta:hover{border-color:var(--gold); background:rgba(199,162,76,0.08);}
+  .nav-toggle{display:none; background:none; border:0; color:var(--parchment); font-size:1.6rem; cursor:pointer;}
+
+  /* ---------- SUB NAV (anchor links) ---------- */
+  .sub-nav{
+    position:sticky; top:70px; z-index:90;
+    background:var(--stone-2);
+    border-bottom:1px solid var(--line);
+    border-top:1px solid var(--line);
+  }
+  .sub-nav ul{
+    display:flex; gap:32px; list-style:none;
+    margin:0; padding:14px var(--gutter);
+    max-width:var(--content-max); margin:0 auto;
+    overflow-x:auto;
+  }
+  .sub-nav a{
+    font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--parchment-dim); white-space:nowrap;
+    padding-bottom:3px; border-bottom:1px solid transparent;
+    transition:color 0.2s ease, border-color 0.2s ease;
+  }
+  .sub-nav a:hover, .sub-nav a.active{color:var(--gold); border-color:var(--gold);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex; align-items:flex-end;
+    background:#0e0c0a;
+    overflow:hidden;
+  }
+  .hero-media{
+    position:absolute; inset:0;
+    background-image:linear-gradient(to top, rgba(10,8,6,0.92) 0%, rgba(10,8,6,0.35) 46%, rgba(10,8,6,0.55) 100%), url('https://grottaresort.rw/images/AV7I5571.jpg');
+    background-size:cover;
+    background-position:center 40%;
+  }
+  .hero-content{
+    position:relative; z-index:2;
+    width:100%;
+    padding:0 var(--gutter) 88px;
+    max-width:var(--content-max);
+    margin:0 auto;
+  }
+  .hero-eyebrow{
+    font-size:0.78rem;
+    letter-spacing:0.16em;
+    color:var(--gold);
+    margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 6vw, 4.6rem);
+    line-height:1.02;
+    max-width:14ch;
+  }
+  .hero-headline{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(1.2rem, 2.2vw, 1.6rem);
+    color:var(--parchment-dim);
+    margin-top:18px;
+    max-width:34ch;
+  }
+  .hero-body{
+    margin-top:26px;
+    font-size:1.05rem;
+    color:var(--parchment-dim);
+    max-width:52ch;
+    line-height:1.7;
+  }
+  .hero-ctas{
+    display:flex; flex-wrap:wrap; gap:16px;
+    margin-top:38px;
+  }
+  .btn{
+    display:inline-block;
+    padding:15px 30px;
+    font-size:0.86rem;
+    letter-spacing:0.03em;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .btn-primary{
+    background:var(--gold);
+    color:#1a1510;
+  }
+  .btn-primary:hover{background:#d9b563;}
+  .btn-secondary{
+    border-color:rgba(243,238,227,0.35);
+    color:var(--parchment);
+  }
+  .btn-secondary:hover{border-color:var(--parchment);}
+
+  .hero-dates{
+    margin-top:52px;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:36px;
+  }
+  .hero-date-item .label{
+    font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--gold-dim);
+    margin-bottom:6px;
+  }
+  .hero-date-item .value{
+    font-family:'Fraunces', serif;
+    font-size:1.02rem;
+  }
+
+  .scroll-cue{
+    position:absolute; bottom:28px; left:50%; transform:translateX(-50%);
+    font-size:0.7rem; letter-spacing:0.14em; color:var(--parchment-dim);
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    z-index:2;
+  }
+  .scroll-cue .line{width:1px; height:34px; background:linear-gradient(to bottom, var(--gold), transparent);}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:118px 0;}
+  .section-alt{background:var(--stone-2);}
+  .kicker{
+    font-size:0.76rem; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--gold-dim); margin-bottom:18px;
+  }
+
+  /* ---------- INTRO ---------- */
+  .intro{
+    display:grid;
+    grid-template-columns:1fr 1.15fr;
+    gap:64px;
+    align-items:start;
+  }
+  .intro h2{font-size:clamp(1.9rem, 3.6vw, 2.9rem); max-width:9ch;}
+  .intro p{
+    font-size:1.12rem; line-height:1.8; color:var(--parchment-dim);
+    max-width:56ch;
+  }
+
+  /* ---------- DATES / DUAL TIMELINE ---------- */
+  .dates-head{max-width:60ch; margin-bottom:64px;}
+  .dates-head h2{font-size:clamp(1.9rem, 3.6vw, 2.9rem);}
+  .dates-head p{color:var(--parchment-dim); margin-top:18px; font-size:1.05rem;}
+
+  .timeline{
+    position:relative;
+    padding:46px 0 20px;
+  }
+  .timeline-track{
+    position:relative;
+    height:6px;
+    background:rgba(243,238,227,0.1);
+    border-radius:99px;
+  }
+  .timeline-peak{
+    position:absolute;
+    left:23%; width:39%;
+    top:0; height:100%;
+    background:var(--gold);
+    border-radius:99px;
+  }
+  .timeline-labels{
+    display:flex; justify-content:space-between;
+    margin-top:16px;
+    font-size:0.72rem; letter-spacing:0.06em; color:var(--parchment-dim);
+  }
+
+  .timeline-cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    margin-top:56px;
+    border:1px solid var(--line);
+  }
+  .timeline-card{
+    background:var(--stone);
+    padding:38px 40px;
+  }
+  .timeline-card .tc-label{
+    font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .timeline-card.peak .tc-label{color:var(--gold);}
+  .timeline-card.season .tc-label{color:var(--parchment-dim);}
+  .timeline-card .tc-dates{
+    font-family:'Fraunces', serif;
+    font-size:1.5rem;
+    margin-bottom:16px;
+  }
+  .timeline-card p{color:var(--parchment-dim); font-size:0.98rem; line-height:1.7; margin:0;}
+
+  /* ---------- EXPERIENCES ---------- */
+  .experiences-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    gap:32px; margin-bottom:70px; flex-wrap:wrap;
+  }
+  .experiences-head h2{font-size:clamp(1.9rem, 3.6vw, 2.9rem); max-width:11ch;}
+
+  .exp-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border-top:1px solid var(--line);
+    align-items:stretch;
+  }
+  .exp-row:last-child{border-bottom:1px solid var(--line);}
+  .exp-row.reverse .exp-media{order:2;}
+  .exp-row.reverse .exp-text{order:1;}
+
+  .exp-media{
+    position:relative;
+    min-height:440px;
+    background-size:cover;
+    background-position:center;
+  }
+  .exp-media.placeholder{
+    background:repeating-linear-gradient(135deg, var(--stone-3), var(--stone-3) 14px, var(--stone-2) 14px, var(--stone-2) 28px);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .placeholder-tag{
+    font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--parchment-dim); border:1px dashed var(--gold-dim);
+    padding:10px 16px; text-align:center; max-width:70%;
+  }
+  .exp-text{
+    padding:64px var(--gutter);
+    display:flex; flex-direction:column; justify-content:center;
+    max-width:560px;
+  }
+  .exp-index{
+    font-family:'Fraunces', serif; font-style:italic;
+    color:var(--gold-dim); font-size:1.1rem; margin-bottom:18px;
+  }
+  .exp-text h3{font-size:clamp(1.5rem, 2.6vw, 2.05rem); margin-bottom:18px;}
+  .exp-text p{color:var(--parchment-dim); font-size:1.02rem; line-height:1.8;}
+
+  /* ---------- ACCOMMODATION ---------- */
+  .accom{
+    position:relative;
+    min-height:640px;
+    display:flex; align-items:center;
+    background-image:linear-gradient(to right, rgba(10,8,6,0.86) 0%, rgba(10,8,6,0.5) 55%, rgba(10,8,6,0.2) 100%), url('https://grottaresort.rw/images/kingroom.png');
+    background-size:cover; background-position:center;
+  }
+  .accom-inner{max-width:540px; padding:0 var(--gutter);}
+  .accom h2{font-size:clamp(1.9rem, 3.6vw, 2.9rem);}
+  .accom p{color:var(--parchment-dim); margin-top:22px; font-size:1.08rem; line-height:1.8;}
+  .accom .btn{margin-top:32px;}
+
+  /* ---------- GALLERY ---------- */
+  .gallery-head{margin-bottom:48px; max-width:60ch;}
+  .gallery-head h2{font-size:clamp(1.9rem, 3.6vw, 2.9rem);}
+  .gallery-scroll{
+    display:flex; gap:20px;
+    overflow-x:auto;
+    padding-bottom:16px;
+    scroll-snap-type:x proximity;
+  }
+  .gallery-item{
+    flex:0 0 auto;
+    scroll-snap-align:start;
+    background-size:cover; background-position:center;
+    height:420px;
+  }
+  .gallery-item:nth-child(1){width:340px;}
+  .gallery-item:nth-child(2){width:480px;}
+  .gallery-item:nth-child(3){width:300px;}
+  .gallery-item:nth-child(4){width:420px;}
+  .gallery-item:nth-child(5){width:340px;}
+  .gallery-item.placeholder{
+    background:repeating-linear-gradient(135deg, var(--stone-3), var(--stone-3) 14px, var(--stone-2) 14px, var(--stone-2) 28px);
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  /* ---------- PRACTICAL INFO ---------- */
+  .practical{
+    border:1px solid var(--line);
+    padding:52px var(--gutter);
+    display:grid; grid-template-columns:1fr 1fr; gap:48px;
+  }
+  .practical h3{font-size:1.5rem; margin-bottom:16px;}
+  .practical p{color:var(--parchment-dim); font-size:1rem; line-height:1.8;}
+  .coming-soon{
+    display:inline-block; margin-top:18px;
+    font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--gold); border-top:1px solid var(--gold-dim); padding-top:10px;
+  }
+
+  /* ---------- CLOSING ---------- */
+  .closing{text-align:center;}
+  .closing-inner{max-width:780px; margin:0 auto;}
+  .closing h2{font-size:clamp(2rem, 4vw, 3.1rem);}
+  .closing p{color:var(--parchment-dim); margin-top:26px; font-size:1.12rem; line-height:1.85;}
+  .closing-line{
+    margin-top:36px;
+    font-family:'Fraunces', serif; font-style:italic;
+    font-size:1.25rem; color:var(--gold);
+  }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    background:linear-gradient(160deg, var(--pine) 0%, var(--stone) 55%);
+    text-align:center;
+    padding:130px 0;
+  }
+  .final-cta h2{font-size:clamp(2rem, 4.4vw, 3.4rem); max-width:16ch; margin:0 auto;}
+  .final-cta .support{color:var(--parchment-dim); max-width:52ch; margin:22px auto 0; font-size:1.05rem;}
+  .final-cta .hero-ctas{justify-content:center; margin-top:40px;}
+  .feature-list{
+    margin-top:56px;
+    display:flex; flex-wrap:wrap; justify-content:center; gap:0;
+    border-top:1px solid var(--line);
+    padding-top:28px;
+  }
+  .feature-list span{
+    font-size:0.82rem; color:var(--parchment-dim);
+    padding:0 22px; border-right:1px solid var(--line);
+  }
+  .feature-list span:last-child{border-right:none;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    padding:64px 0 40px;
+  }
+  .footer-grid{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px;
+  }
+  .footer-col{font-size:0.9rem; color:var(--parchment-dim); line-height:1.9;}
+  .footer-col a{transition:color 0.2s ease;}
+  .footer-col a:hover{color:var(--gold);}
+  .footer-bottom{
+    margin-top:56px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-size:0.78rem; color:var(--parchment-dim);
+  }
+
+  /* ---------- RESERVE MODAL ---------- */
+  .modal-overlay{
+    position:fixed; inset:0; z-index:200;
+    background:rgba(10,8,6,0.82);
+    display:none; align-items:center; justify-content:center;
+    padding:24px;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal{
+    background:var(--stone-2); border:1px solid var(--line);
+    max-width:480px; width:100%; padding:44px;
+    position:relative;
+  }
+  .modal-close{
+    position:absolute; top:18px; right:18px;
+    background:none; border:0; color:var(--parchment); font-size:1.4rem; cursor:pointer;
+  }
+  .modal h3{font-size:1.5rem; margin-bottom:22px;}
+  .modal label{display:block; font-size:0.8rem; color:var(--parchment-dim); margin-bottom:6px; margin-top:16px;}
+  .modal input, .modal select, .modal textarea{
+    width:100%; background:var(--stone); border:1px solid var(--line);
+    color:var(--parchment); padding:11px 12px; font-family:inherit; font-size:0.94rem;
+  }
+  .modal .btn{width:100%; margin-top:26px; text-align:center;}
+  .modal-success{display:none; text-align:center;}
+  .modal-success.show{display:block;}
+  .modal-success .mark{color:var(--gold); font-size:1.4rem; margin-bottom:14px;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .primary-nav, .nav-cta{display:none;}
+    .nav-toggle{display:block;}
+    .intro{grid-template-columns:1fr; gap:32px;}
+    .timeline-cards{grid-template-columns:1fr;}
+    .exp-row{grid-template-columns:1fr;}
+    .exp-media{min-height:300px;}
+    .exp-row.reverse .exp-media, .exp-row.reverse .exp-text{order:initial;}
+    .exp-text{padding:40px var(--gutter);}
+    .accom{min-height:520px;}
+    .practical{grid-template-columns:1fr;}
+    .feature-list span{border-right:none; padding:6px 16px;}
+    section{padding:80px 0;}
+    .hero{min-height:92vh;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <a href="/" class="logo">Grotta Resort</a>
+  <nav>
+    <ul class="primary-nav">
+      <li><a href="/stay.html">Stay</a></li>
+      <li><a href="/experiences.html">Experiences</a></li>
+      <li><a href="/caves.html">Caves</a></li>
+      <li><a href="/events.html">Events</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="#reserve" class="nav-cta" data-open-modal>Reserve</a>
+  <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+</header>
+
+<!-- ================= SUB NAV (in-page anchors) ================= -->
+<nav class="sub-nav" aria-label="Christmas at Grotta sections">
+  <ul>
+    <li><a href="#experiences">Experiences</a></li>
+    <li><a href="#dates">Dates</a></li>
+    <li><a href="#stay">Stay</a></li>
+    <li><a href="#reserve" data-open-modal>Reserve</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-media" role="img" aria-label="Christmas lights and festive decorations at Grotta Resort in Musanze, Rwanda."></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Grotta Resort | Musanze | Festive Season 2026/27</p>
+      <h1>Christmas at Grotta 2026</h1>
+      <p class="hero-headline">A Mountain Christmas Village Like No Other</p>
+      <p class="hero-body">This festive season, Grotta Resort transforms into a spectacular Christmas Village in the volcanic highlands of Musanze. Discover sparkling lights, handcrafted decorations, festive food, live entertainment, family attractions and unforgettable holiday experiences.</p>
+      <div class="hero-ctas">
+        <a href="#reserve" class="btn btn-primary" data-open-modal>Reserve Your Christmas Experience</a>
+        <a href="#stay" class="btn btn-secondary">Book a Festive Stay</a>
+      </div>
+      <div class="hero-dates">
+        <div class="hero-date-item">
+          <div class="label">Decoration Season</div>
+          <div class="value">10 December 2026 &ndash; 20 January 2027</div>
+        </div>
+        <div class="hero-date-item">
+          <div class="label">Peak Christmas Village</div>
+          <div class="value">20 December 2026 &ndash; 10 January 2027</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+  </section>
+
+  <!-- ================= INTRODUCTION ================= -->
+  <section class="intro-section">
+    <div class="wrap intro">
+      <h2>Welcome to Christmas at Grotta</h2>
+      <p>Whether you visit for a day, a festive meal, a weekend escape or a Christmas holiday stay, every corner of Grotta becomes part of one connected festive experience. Explore the village, enjoy seasonal entertainment, gather around warm food and drinks, and create Christmas memories surrounded by the beauty of Musanze.</p>
+    </div>
+  </section>
+
+  <!-- ================= DATES / DUAL TIMELINE ================= -->
+  <section class="section-alt" id="dates">
+    <div class="wrap">
+      <div class="dates-head">
+        <p class="kicker">Event Dates</p>
+        <h2>Two Seasons, One Village</h2>
+        <p>The resort dresses for the holidays well before the Village comes alive. Here's how the two periods relate.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-track">
+          <div class="timeline-peak"></div>
+        </div>
+        <div class="timeline-labels">
+          <span>10 Dec</span>
+          <span>20 Jan</span>
+        </div>
+      </div>
+
+      <div class="timeline-cards">
+        <div class="timeline-card season">
+          <div class="tc-label">Christmas Decoration Season</div>
+          <div class="tc-dates">10 December 2026 &ndash; 20 January 2027</div>
+          <p>Experience Grotta dressed for the holidays with festive lights, themed decorations, seasonal photo moments, illuminated pathways, Christmas dining experiences and a magical evening atmosphere.</p>
+        </div>
+        <div class="timeline-card peak">
+          <div class="tc-label">Peak Christmas Village Season</div>
+          <div class="tc-dates">20 December 2026 &ndash; 10 January 2027</div>
+          <p>During the peak festive period, the resort comes alive with entertainment, a curated market, Christmas cinema, food experiences, family attractions and special seasonal programming.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCES ================= -->
+  <section id="experiences">
+    <div class="wrap">
+      <div class="experiences-head">
+        <h2>Six Ways to Experience the Village</h2>
+        <p class="kicker" style="margin-bottom:0;">Peak Christmas Village Season</p>
+      </div>
+    </div>
+
+    <div class="exp-row">
+      <div class="exp-media placeholder" role="img" aria-label="Christmas market stalls with festive lights, gifts and mountain views — placeholder, replace with approved photography.">
+        <span class="placeholder-tag">Photography placeholder<br>Christmas Market</span>
+      </div>
+      <div class="exp-text">
+        <p class="exp-index">One</p>
+        <h3>Christmas Market</h3>
+        <p>Wander through charming festive stalls offering holiday gifts, handcrafted products, local specialties, seasonal treats and Christmas-inspired shopping. Discover unique gifts while enjoying mountain views and the atmosphere of the village.</p>
+      </div>
+    </div>
+
+    <div class="exp-row reverse">
+      <div class="exp-media" style="background-image:url('https://grottaresort.rw/images/nlong.jpg');" role="img" aria-label="Long table dining and gathering at Grotta Resort."></div>
+      <div class="exp-text">
+        <p class="exp-index">Two</p>
+        <h3>Festive Food Zone</h3>
+        <p>Enjoy BBQ specialties, pilau, seasonal desserts, festive drinks and family-friendly dining options. Gather with friends and family in decorated spaces created for the warmth and joy of the season.</p>
+      </div>
+    </div>
+
+    <div class="exp-row">
+      <div class="exp-media" style="background-image:url('https://grottaresort.rw/images/DSC03988copy.JPG');" role="img" aria-label="Firelit evening atmosphere at Grotta Resort."></div>
+      <div class="exp-text">
+        <p class="exp-index">Three</p>
+        <h3>Hot Wine Experience</h3>
+        <p>Gather around large warming pots gently simmering with wine, festive spices and seasonal aromas. Relax beneath Christmas lights with cozy blankets and enjoy the mountain evening atmosphere.</p>
+      </div>
+    </div>
+
+    <div class="exp-row reverse">
+      <div class="exp-media placeholder" role="img" aria-label="Christmas cinema tent glowing at dusk — placeholder, replace with approved photography.">
+        <span class="placeholder-tag">Photography placeholder<br>Christmas Cinema</span>
+      </div>
+      <div class="exp-text">
+        <p class="exp-index">Four</p>
+        <h3>Christmas Cinema</h3>
+        <p>Enjoy family-friendly Christmas films inside our festive cinema in the large event tent. Multiple daily showings create a warm holiday experience for families, couples and friends.</p>
+      </div>
+    </div>
+
+    <div class="exp-row">
+      <div class="exp-media" style="background-image:url('https://grottaresort.rw/images/livemusic.jpg');" role="img" aria-label="Live music performance in the highland gardens at Grotta Resort."></div>
+      <div class="exp-text">
+        <p class="exp-index">Five</p>
+        <h3>Live Entertainment</h3>
+        <p>Experience a rotating festive program featuring live music, Christmas choirs, cultural performances, seasonal entertainment, family-friendly stage shows and interactive holiday activities.</p>
+      </div>
+    </div>
+
+    <div class="exp-row reverse">
+      <div class="exp-media" style="background-image:url('https://grottaresort.rw/images/AV7I2870.jpg');" role="img" aria-label="Family and kids area at Grotta Resort."></div>
+      <div class="exp-text">
+        <p class="exp-index">Six</p>
+        <h3>Family Attractions</h3>
+        <p>Christmas crafts, interactive experiences, supervised play areas, seasonal photo opportunities, children's holiday activities and the Bunny Kingdom bring wonder to guests of all ages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACCOMMODATION CONVERSION ================= -->
+  <section class="accom" id="stay">
+    <div class="accom-inner">
+      <p class="kicker">Stay the Season</p>
+      <h2>Turn Your Visit into a Christmas Getaway</h2>
+      <p>Stay overnight and experience the fullest version of Christmas at Grotta. Enjoy the festive atmosphere into the evening, wake up in the volcanic highlands and make the celebration part of a memorable Musanze escape.</p>
+      <a href="https://live.ipms247.com/booking/book-rooms-grottamusanze" class="btn btn-primary">Explore Festive Stays</a>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section class="section-alt">
+    <div class="wrap gallery-head">
+      <p class="kicker">Gallery</p>
+      <h2>Life at the Village</h2>
+    </div>
+    <div class="wrap">
+      <div class="gallery-scroll">
+        <div class="gallery-item" style="background-image:url('https://grottaresort.rw/images/DSC02802-1.JPG');" role="img" aria-label="Volcanic highlands at dawn, Grotta Resort."></div>
+        <div class="gallery-item" style="background-image:url('https://grottaresort.rw/images/AV7I1986.jpg');" role="img" aria-label="Grotta Resort gardens and cave setting."></div>
+        <div class="gallery-item placeholder" role="img" aria-label="Christmas market atmosphere — placeholder, replace with approved photography.">
+          <span class="placeholder-tag">Placeholder</span>
+        </div>
+        <div class="gallery-item" style="background-image:url('https://grottaresort.rw/images/DSC02796.JPG');" role="img" aria-label="Evening garden atmosphere at Grotta Resort."></div>
+        <div class="gallery-item" style="background-image:url('https://grottaresort.rw/images/AV7I4026.jpg');" role="img" aria-label="Evening ambience at Grotta Resort."></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRACTICAL INFORMATION ================= -->
+  <section>
+    <div class="wrap">
+      <div class="practical">
+        <div>
+          <p class="kicker">Practical Information</p>
+          <h3>Booking Notice</h3>
+          <p>Limited capacity applies during peak festive dates. We recommend reserving your preferred experience or festive stay ahead of the season.</p>
+        </div>
+        <div>
+          <h3>Schedules &amp; Pricing</h3>
+          <p>Cinema sessions, market vendors, entertainment lineups and pricing are being finalised with the Grotta Resort team.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLOSING DESTINATION ================= -->
+  <section class="closing">
+    <div class="wrap closing-inner">
+      <p class="kicker">A Destination, Not a Decoration</p>
+      <h2>A Christmas Destination Worth Travelling For</h2>
+      <p>Christmas at Grotta is more than an event, a market or a decorated resort. It is a complete festive destination where mountain scenery, holiday traditions, hospitality, entertainment and memorable moments come together in one magical experience.</p>
+      <p class="closing-line">Welcome to Christmas at Grotta 2026. A Mountain Christmas Village in the Heart of Rwanda.</p>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="final-cta" id="reserve">
+    <div class="wrap">
+      <h2>Reserve Your Christmas Experience</h2>
+      <p class="support">Limited capacity applies during peak festive dates. Book early to secure your preferred experience or festive stay.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-primary" data-open-modal>Reserve Now</a>
+        <a href="/#contact" class="btn btn-secondary">Contact Grotta Resort</a>
+      </div>
+      <div class="feature-list">
+        <span>Christmas Village Access</span>
+        <span>Seasonal Dining</span>
+        <span>Christmas Market</span>
+        <span>Christmas Cinema</span>
+        <span>Live Entertainment</span>
+        <span>Family Attractions</span>
+        <span>Festive Accommodation</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <strong style="color:var(--parchment);">Grotta Resort</strong><br>
+        Musanze, Northern Rwanda<br>
+        2km from Volcanoes National Park
+      </div>
+      <div class="footer-col">
+        <a href="/stay.html">Stay</a><br>
+        <a href="/experiences.html">Experiences</a><br>
+        <a href="/caves.html">Caves</a><br>
+        <a href="/events.html">Events</a>
+      </div>
+      <div class="footer-col">
+        Reservations &amp; Enquiries<br>
+        <a href="mailto:reservations@grottaresort.rw">reservations@grottaresort.rw</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Grotta Resort. All rights reserved.</span>
+      <span>Musanze &middot; Northern Rwanda</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= RESERVE MODAL ================= -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div id="modalForm">
+      <h3 id="modalTitle">Reserve Your Christmas Experience</h3>
+      <form id="reserveForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="guests" min="1" value="2">
+        <label for="notes">Additional Notes (Optional)</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+        <button type="submit" class="btn btn-primary">Reserve My Place</button>
+      </form>
+    </div>
+    <div class="modal-success" id="modalSuccess">
+      <div class="mark">&#10022;</div>
+      <h3>Enquiry Sent</h3>
+      <p style="color:var(--parchment-dim);">Your enquiry has been sent to our team. We will confirm your place within 48 hours.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Header scroll state
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('is-scrolled', window.scrollY > 40);
+  });
+
+  // Reserve modal
+  var overlay = document.getElementById('modalOverlay');
+  var openers = document.querySelectorAll('[data-open-modal]');
+  var closeBtn = document.getElementById('modalClose');
+  var form = document.getElementById('reserveForm');
+  var modalForm = document.getElementById('modalForm');
+  var modalSuccess = document.getElementById('modalSuccess');
+
+  openers.forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      overlay.classList.add('open');
+      modalForm.style.display = 'block';
+      modalSuccess.classList.remove('show');
+    });
+  });
+  closeBtn.addEventListener('click', function(){ overlay.classList.remove('open'); });
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) overlay.classList.remove('open'); });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    // TODO: wire to the approved booking/inquiry endpoint supplied by Grotta Resort.
+    modalForm.style.display = 'none';
+    modalSuccess.classList.add('show');
+  });
+
+  // Sub-nav active state
+  var sections = ['experiences','dates','stay','reserve'].map(function(id){ return document.getElementById(id); });
+  var subLinks = document.querySelectorAll('.sub-nav a[href^="#"]');
+  window.addEventListener('scroll', function(){
+    var pos = window.scrollY + 160;
+    sections.forEach(function(sec, i){
+      if(!sec) return;
+      var top = sec.offsetTop, bottom = top + sec.offsetHeight;
+      if(pos >= top && pos < bottom){
+        subLinks.forEach(function(l){ l.classList.remove('active'); });
+        var match = document.querySelector('.sub-nav a[href="#' + sec.id + '"]');
+        if(match) match.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
