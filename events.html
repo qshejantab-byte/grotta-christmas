@@ -42,17 +42,10 @@ a{color:inherit}
 .er-float:hover{background:#e2c97e;transform:translateY(-3px)}
 
 /* ══ SUB-NAV (Experiences / Dates / Stay / Reserve) ══ */
-.xm-subnav{position:fixed;top:68px;left:0;right:0;z-index:80;padding:1.5rem 4vw;background:transparent;border-bottom:1px solid transparent;backdrop-filter:none;transition:background .4s ease,backdrop-filter .4s ease,border-color .4s ease,padding .4s ease}
-.xm-subnav.is-scrolled{background:rgba(6,5,4,.95);backdrop-filter:blur(16px) saturate(1.3);border-bottom-color:rgba(201,165,82,.1);padding:1rem 4vw;box-shadow:0 12px 32px rgba(0,0,0,.25)}
-.xm-subnav ul{display:flex;align-items:center;justify-content:center;gap:0;list-style:none;max-width:900px;margin:0 auto;overflow-x:auto}
-.xm-step-line{width:clamp(30px,6vw,64px);height:1px;background:rgba(201,165,82,.16);flex-shrink:0;margin:0 .4rem}
-.xm-step{display:flex;flex-direction:column;align-items:center;gap:.55rem;text-decoration:none;flex-shrink:0}
-.xm-step-circle{width:38px;height:38px;border-radius:50%;border:1px solid rgba(201,165,82,.22);display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;font-size:.6rem;font-weight:400;color:rgba(200,192,174,.4);transition:border-color .35s,color .35s,box-shadow .35s}
-.xm-step-label{font-family:'Jost',sans-serif;font-size:.42rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,192,174,.32);transition:color .35s}
-.xm-step:hover .xm-step-circle{border-color:rgba(201,165,82,.55);color:rgba(232,224,208,.7)}
-.xm-step.active .xm-step-circle{border-color:#c9a552;color:#c9a552;box-shadow:0 0 0 3px rgba(201,165,82,.12)}
-.xm-step.active .xm-step-label{color:#c9a552}
-@media(max-width:600px){.xm-subnav{padding:1.2rem 4vw}.xm-step-line{width:22px;margin:0 .2rem}.xm-step-circle{width:32px;height:32px;font-size:.54rem}.xm-step-label{font-size:.36rem}}
+.xm-subnav{position:sticky;top:68px;z-index:90;background:rgba(6,5,4,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,165,82,.1)}
+.xm-subnav ul{display:flex;gap:2.2rem;list-style:none;max-width:1280px;margin:0 auto;padding:.9rem 4vw;overflow-x:auto}
+.xm-subnav a{font-family:'Jost',sans-serif;font-size:.5rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(200,192,174,.42);text-decoration:none;white-space:nowrap;padding-bottom:3px;border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
+.xm-subnav a:hover,.xm-subnav a.active{color:#c9a552;border-color:#c9a552}
 
 /* ══ HERO ══ */
 .xm-hero{position:relative;height:100vh;min-height:760px;display:flex;align-items:flex-end;overflow:hidden}
@@ -272,15 +265,14 @@ a{color:inherit}
 
 <nav class="xm-subnav" aria-label="Christmas at Grotta sections">
   <ul>
-    <li><a href="#dates" class="xm-step"><span class="xm-step-circle">01</span><span class="xm-step-label">Dates</span></a></li>
-    <li class="xm-step-line"></li>
-    <li><a href="#experiences" class="xm-step"><span class="xm-step-circle">02</span><span class="xm-step-label">Experiences</span></a></li>
-    <li class="xm-step-line"></li>
-    <li><a href="#stay" class="xm-step"><span class="xm-step-circle">03</span><span class="xm-step-label">Stay</span></a></li>
-    <li class="xm-step-line"></li>
-    <li><a href="#" onclick="openXmasModal();return false;" class="xm-step"><span class="xm-step-circle">04</span><span class="xm-step-label">Reserve</span></a></li>
+    <li><a href="#experiences">Experiences</a></li>
+    <li><a href="#dates">Dates</a></li>
+    <li><a href="#stay">Stay</a></li>
+    <li><a href="#" onclick="openXmasModal();return false;">Reserve</a></li>
   </ul>
 </nav>
+
+<button class="er-float" id="xm-float" onclick="openXmasModal()">Reserve Your Christmas Experience →</button>
 
 <!-- ══ HERO ══ -->
 <div class="xm-hero">
@@ -468,6 +460,7 @@ a{color:inherit}
     <p>Christmas at Grotta is more than an event, a market or a decorated resort. It is a complete festive destination where mountain scenery, holiday traditions, hospitality, entertainment and memorable moments come together in one magical experience.</p>
     <p class="xm-closing-line">Welcome to Christmas at Grotta 2026. A Mountain Christmas Village in the Heart of Rwanda.</p>
   </div>
+  <p></p>
 </div>
 
 <!-- ══ FINAL CTA ══ -->
@@ -526,19 +519,21 @@ a{color:inherit}
   const xmRevObs = new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');xmRevObs.unobserve(e.target);}}),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>xmRevObs.observe(el));
 
-  // Sub-nav active state + scroll background
-  const xmSubnavEl = document.querySelector('.xm-subnav');
-  const xmSections = ['dates','experiences','stay','reserve'].map(id=>document.getElementById(id));
-  const xmSteps = document.querySelectorAll('.xm-subnav .xm-step[href^="#"]');
+  // Floating reserve CTA
+  const xmFloat = document.getElementById('xm-float');
+  window.addEventListener('scroll', ()=>xmFloat.classList.toggle('visible', window.scrollY>600), {passive:true});
+
+  // Sub-nav active state
+  const xmSections = ['experiences','dates','stay','reserve'].map(id=>document.getElementById(id));
+  const xmSubLinks = document.querySelectorAll('.xm-subnav a[href^="#"]');
   window.addEventListener('scroll', ()=>{
-    xmSubnavEl?.classList.toggle('is-scrolled', window.scrollY > 60);
     const pos = window.scrollY + 160;
     xmSections.forEach(sec=>{
       if(!sec) return;
       const top = sec.offsetTop, bottom = top + sec.offsetHeight;
       if(pos>=top && pos<bottom){
-        xmSteps.forEach(l=>l.classList.remove('active'));
-        const match = document.querySelector('.xm-subnav .xm-step[href="#'+sec.id+'"]');
+        xmSubLinks.forEach(l=>l.classList.remove('active'));
+        const match = document.querySelector('.xm-subnav a[href="#'+sec.id+'"]');
         if(match) match.classList.add('active');
       }
     });
