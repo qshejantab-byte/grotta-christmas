@@ -63,17 +63,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const ham = document.querySelector('.hamburger');
   const mobileNav = document.querySelector('.mobile-nav');
   if (ham && mobileNav) {
+    const closeMobileNav = () => {
+      ham.classList.remove('open');
+      mobileNav.classList.remove('open');
+    };
     ham.addEventListener('click', () => {
       ham.classList.toggle('open');
       mobileNav.classList.toggle('open');
     });
+    // close button inside the mobile nav overlay
+    document.getElementById('mob-close')?.addEventListener('click', closeMobileNav);
     // close on link click
     mobileNav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        ham.classList.remove('open');
-        mobileNav.classList.remove('open');
-      });
+      a.addEventListener('click', closeMobileNav);
     });
+  }
+
+  // Navbar scroll effect
+  const navbarEl = document.querySelector('.navbar');
+  if (navbarEl) {
+    window.addEventListener('scroll', () => {
+      navbarEl.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
   }
 
   // Scroll animations

@@ -67,8 +67,9 @@ const NAV_HTML = `
 
 /* Hamburger */
 .hamburger {
-  display: none; flex-direction: column; gap: 5px;
+  display: none; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
   background: none; border: none; cursor: pointer; padding: .4rem; z-index: 1001;
+  min-width: 44px; min-height: 44px;
 }
 .hamburger span {
   display: block; width: 24px; height: 1px;
@@ -141,7 +142,7 @@ const NAV_HTML = `
 }
 .mobile-nav-close {
   background: none; border: none; cursor: pointer;
-  width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
   color: rgba(201,165,82,.55); font-size: 1.2rem; transition: color .3s ease;
 }
 .mobile-nav-close:hover { color: rgba(201,165,82,.9); }
@@ -604,7 +605,7 @@ const CONCIERGE_HTML = `
 }
 .gc-close {
   position: fixed; top: 5rem; right: 1rem;
-  width: 36px; height: 36px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   background: rgba(201,165,82,.06);
   border: 1px solid rgba(201,165,82,.18);
